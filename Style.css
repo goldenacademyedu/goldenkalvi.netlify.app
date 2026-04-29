@@ -1,8 +1,9 @@
 body { margin:0; font-family: 'Segoe UI'; }
 
 .navbar {
-  display:flex; justify-content:space-between; padding:15px;
-  background:#111; color:#fff; position:sticky; top:0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .navbar a { color:#fff; margin-left:15px; text-decoration:none; }
 
