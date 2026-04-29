@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <h1>Golden Academy</h1>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<section class="contact">
+  <h2>Contact Us</h2>
+  <p>📞 +91 98765 43210</p>
+  <p>📧 goldenacademy@email.com</p>
+  <p>📍 Kattur, Trichy</p>
+
+  <!-- Netlify Form -->
+  <form name="contact" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="contact" />
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <!-- Google Map -->
+  <iframe src="https://maps.google.com/maps?q=trichy&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</section>
+
+<footer>© 2026 Golden Academy</footer>
+</body>
+</html>
