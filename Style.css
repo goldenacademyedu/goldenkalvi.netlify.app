@@ -123,3 +123,103 @@ footer {
   background: #000;
   color: #fff;
 }
+
+/* ===== TOP HEADER ===== */
+.top-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #e5e7eb;
+  padding: 10px 20px;
+}
+
+.top-logo {
+  height: 60px;
+}
+
+.top-text {
+  text-align: center;
+}
+
+.top-text h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.top-text p {
+  margin: 2px;
+  font-size: 14px;
+}
+
+.top-actions a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.pay-btn {
+  background: #0f172a;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: #0f172a;
+  padding: 10px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+}
+
+.menu a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  min-width: 180px;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ===== SLIDER ===== */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: 1s;
+}
+
+.slide.active {
+  opacity: 1;
+}
