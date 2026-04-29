@@ -5,7 +5,17 @@ body { margin:0; font-family: 'Segoe UI'; }
   justify-content: space-between;
   align-items: center;
 }
-.navbar a { color:#fff; margin-left:15px; text-decoration:none; }
+.logo {
+  height: 50px;
+  width: auto;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0f172a;
+  padding: 10px 20px;
+}
 
 .hero {
   text-align:center; padding:80px;
