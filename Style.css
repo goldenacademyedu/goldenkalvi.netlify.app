@@ -34,11 +34,17 @@ body {
   object-fit: contain;
 }
 
-/* HERO */
+/* ===== PREMIUM HERO ===== */
 .hero {
+  height: 80vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
+              url('https://images.unsplash.com/photo-1588072432836-e10032774350');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 80px;
-  background: linear-gradient(135deg,#4f46e5,#06b6d4);
   color: #fff;
 }
 
