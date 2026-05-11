@@ -126,25 +126,24 @@ body {
 
 .slider{
   width:100%;
+  height:550px;
   overflow:hidden;
-  background:#000;
+  background:#02152f;
 }
 
 .slides{
   display:flex;
-  width:100%;
+  height:100%;
   animation:slide 12s infinite;
 }
 
 .slides img{
-  width:100%;
-  height:550px;
+  min-width:100%;
+  height:100%;
 
   object-fit:contain;
 
   background:#02152f;
-
-  flex:1 0 100%;
 }
 
 /* SLIDE ANIMATION */
@@ -152,19 +151,31 @@ body {
 @keyframes slide{
 
   0%{
-    transform:translateX(0);
+    transform:translateX(0%);
   }
 
-  33%{
+  30%{
+    transform:translateX(0%);
+  }
+
+  35%{
     transform:translateX(-100%);
   }
 
-  66%{
+  65%{
+    transform:translateX(-100%);
+  }
+
+  70%{
+    transform:translateX(-200%);
+  }
+
+  95%{
     transform:translateX(-200%);
   }
 
   100%{
-    transform:translateX(0);
+    transform:translateX(0%);
   }
 }
 
