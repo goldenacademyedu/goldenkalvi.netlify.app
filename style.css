@@ -14,11 +14,12 @@ body {
   top:0;
   z-index:1000;
   height:80px;
+  flex-wrap:nowrap;
 }
 
 /* LOGO */
 .logo{
-  height:65px;
+  height:55px;
   width:auto;
 }
 
@@ -114,6 +115,18 @@ body {
 /* MOBILE VIEW */
 @media(max-width:768px){
 
+  @media(max-width:768px){
+
+  .navbar{
+    padding:10px 15px;
+  }
+
+  .logo{
+    height:45px;
+    max-width:80%;
+  }
+
+}
   .menu-toggle{
     display:block;
   }
