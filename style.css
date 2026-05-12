@@ -117,19 +117,27 @@ body {
 
   @media(max-width:768px){
 
+@media(max-width:768px){
+
   .navbar{
-    padding:10px 15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:nowrap;
   }
 
   .logo{
     height:45px;
-    max-width:80%;
+    width:auto;
+    max-width:75%;
+  }
+
+  .menu-toggle{
+    display:block;
+    margin-left:auto;
   }
 
 }
-  .menu-toggle{
-    display:block;
-  }
 
   .nav-links{
     display:none;
