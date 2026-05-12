@@ -39,10 +39,12 @@ body {
 
 /* HAMBURGER */
 .menu-toggle{
-  display:none;
-  font-size:32px;
+  display:block;
+  font-size:30px;
   cursor:pointer;
-  color:black;
+  margin-left:auto;
+  position:relative;
+  top:-15px;
 }
 
 /* DROPDOWN */
