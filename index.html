@@ -305,11 +305,17 @@
 
 <!-- NAVBAR -->
 
- <nav class="navbar">
+<nav class="navbar">
 
   <img src="logo.png" class="logo">
 
-  <div class="nav-links">
+  <!-- HAMBURGER -->
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
+
+  <div class="nav-links" id="nav-links">
+
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
     <a href="admission.html">Admission 2026-2027</a>
@@ -317,6 +323,7 @@
     <!-- COURSES DROPDOWN -->
     <div class="dropdown">
       <button class="dropbtn">Courses ▼</button>
+
       <div class="dropdown-content">
 
         <!-- COURSE DETAILS -->
@@ -324,6 +331,7 @@
           <button class="sub-dropbtn">
             Course Details ▶
           </button>
+
           <div class="sub-dropdown-content">
             <a href="class6-course.html">Class 6</a>
             <a href="class7-course.html">Class 7</a>
@@ -342,6 +350,7 @@
           <button class="sub-dropbtn">
             Study Materials ▶
           </button>
+
           <div class="sub-dropdown-content">
             <a href="class6-materials.html">Class 6</a>
             <a href="class7-materials.html">Class 7</a>
@@ -354,26 +363,38 @@
             <a href="neet-materials.html">NEET</a>
           </div>
         </div>
+
       </div>
     </div>
-    
+
     <!-- LOGIN DROPDOWN -->
     <div class="dropdown">
       <button class="dropbtn">Login ▼</button>
+
       <div class="dropdown-content">
         <a href="student-login.html">Student Login</a>
         <a href="faculty-login.html">Faculty Login</a>
       </div>
     </div>
-  
+
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
     <a href="career.html">Career</a>
-    
+
   </div>
 
 </nav>
 
+<!-- JAVASCRIPT -->
+<script>
+const toggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+toggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+  
 <!-- SLIDER -->
 
 <div class="slider">
