@@ -3,39 +3,145 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact</title>
+  <title>Contact - Golden Academy</title>
+
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
-  <h1>Golden Academy</h1>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="courses.html">Courses</a>
-    <a href="contact.html">Contact</a>
+
+  <img src="logo.png" class="logo">
+
+  <!-- HAMBURGER -->
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
   </div>
+
+  <div class="nav-links" id="nav-links">
+
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="admission.html">Admission 2026-2027</a>
+
+    <!-- COURSES -->
+    <div class="dropdown">
+
+      <button class="dropbtn">
+        Courses ▼
+      </button>
+
+      <div class="dropdown-content">
+
+        <a href="courses.html">All Courses</a>
+        <a href="jee-course.html">JEE</a>
+        <a href="neet-course.html">NEET</a>
+
+      </div>
+
+    </div>
+
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+
+  </div>
+
 </nav>
 
-<section class="contact">
+<!-- CONTACT SECTION -->
+<section class="contact-section">
+
   <h2>Contact Us</h2>
-  <p>📞 +91 88831 17520</p>
-  <p>📧 goldenacademyedu@gmail.com</p>
-  <p>📍 Balaji nagar, Kattur, Trichy</p>
 
-  <!-- Netlify Form -->
-  <form name="contact" method="POST" data-netlify="true">
-    <input type="hidden" name="form-name" value="contact" />
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" placeholder="Your Message"></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+  <div class="contact-container">
 
-  <!-- Google Map -->
-  <iframe src="https://maps.google.com/maps?q=trichy&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+    <!-- LEFT SIDE -->
+    <div class="contact-info">
+
+      <div class="info-box">
+        📞 <span>+91 88831 17520</span>
+      </div>
+
+      <div class="info-box">
+        📧 <span>goldenacademyedu@gmail.com</span>
+      </div>
+
+      <div class="info-box">
+        📍 <span>Balaji Nagar, Kattur, Trichy</span>
+      </div>
+
+      <!-- MAP -->
+      <div class="map-box">
+
+        <iframe
+          src="https://maps.google.com/maps?q=trichy&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          width="100%"
+          height="250"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="contact-form">
+
+      <!-- NETLIFY FORM -->
+      <form name="contact" method="POST" data-netlify="true">
+
+        <input type="hidden" name="form-name" value="contact" />
+
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          required
+        />
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          required
+        />
+
+        <textarea
+          name="message"
+          rows="6"
+          placeholder="Your Message">
+        </textarea>
+
+        <button type="submit">
+          Send Message
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
 </section>
 
-<footer>© 2026 Golden Academy</footer>
+<!-- FOOTER -->
+<footer class="footer">
+  © 2026 Golden Academy
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+const toggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+toggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+
 </body>
 </html>
