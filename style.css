@@ -3,15 +3,26 @@ body {
   font-family:'Segoe UI';
 }
 
-/* Navbar */
+/* NAVBAR */
 .navbar{
   display:flex;
   justify-content:space-between;
   align-items:center;
   padding:15px 5%;
   background:white;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  height:80px;
 }
 
+/* LOGO */
+.logo{
+  height:65px;
+  width:auto;
+}
+
+/* NAV LINKS */
 .nav-links{
   display:flex;
   align-items:center;
@@ -22,21 +33,18 @@ body {
   text-decoration:none;
   color:#111;
   font-weight:500;
+  font-size:18px;
 }
 
-.navbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 5%;
-  background:white;
-  position:sticky;
-  top:0;
-  z-index:1000;
+/* HAMBURGER */
+.menu-toggle{
+  display:none;
+  font-size:32px;
+  cursor:pointer;
+  color:black;
 }
 
 /* DROPDOWN */
-
 .dropdown{
   position:relative;
 }
@@ -47,8 +55,10 @@ body {
   font-size:16px;
   cursor:pointer;
   font-weight:500;
+  color:#111;
 }
 
+/* DROPDOWN CONTENT */
 .dropdown-content{
   display:none;
   position:absolute;
@@ -73,7 +83,6 @@ body {
 }
 
 /* SUB DROPDOWN */
-
 .sub-dropdown{
   position:relative;
 }
@@ -102,37 +111,50 @@ body {
   display:block;
 }
 
-.logo{
-  height:70px;
+/* MOBILE VIEW */
+@media(max-width:768px){
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .nav-links{
+    display:none;
+    flex-direction:column;
+    align-items:flex-start;
+    position:absolute;
+    top:80px;
+    left:0;
+    width:100%;
+    background:white;
+    padding:20px;
+    box-shadow:0 5px 10px rgba(0,0,0,0.1);
+    gap:15px;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .dropdown-content{
+    position:static;
+    box-shadow:none;
+    min-width:100%;
+  }
+
+  .sub-dropdown-content{
+    position:static;
+    box-shadow:none;
+    min-width:100%;
+    padding-left:15px;
+  }
+
+  .dropdown:hover .dropdown-content,
+  .sub-dropdown:hover .sub-dropdown-content{
+    display:block;
+  }
+
 }
-
-  /* White background */
-  background:#ffffff;
-
-  color:#fff;
-  padding:10px 20px;
-
-  /* Reduced header height */
-  height:80px;
-
-  position:sticky;
-  top:0;
-  z-index:1000;
-}
-
-.navbar a {
-  color:#black;
-  margin-left:20px;
-  text-decoration:none;
-  font-size:18px;
-}
-
-/* Logo */
-.logo {
-  height:65px;
-  width:auto;
-}
-
 /* SLIDER */
 
 .slider{
