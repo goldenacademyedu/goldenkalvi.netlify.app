@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Class 10 Study Materials - Golden Academy</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f5f5f5;
+}
+
+/* TOP BAR */
+
+.top-bar{
+background:#02152f;
+color:white;
+padding:8px 5%;
+display:flex;
+justify-content:space-between;
+font-size:14px;
+}
+
+.email a{
+color:white;
+text-decoration:none;
+}
+
+/* NAVBAR */
+
+.navbar{
+background:white;
+padding:15px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo{
+height:60px;
+}
+
+.nav-links{
+display:flex;
+gap:20px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#02152f;
+font-weight:bold;
+}
+
+/* PAGE TITLE */
+
+.page-title{
+text-align:center;
+padding:50px 20px 20px;
+}
+
+.page-title h1{
+font-size:40px;
+color:#02152f;
+}
+
+/* SUBJECT BOXES */
+
+.subjects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+padding:40px 5%;
+}
+
+.subject-box{
+background:white;
+padding:50px 20px;
+text-align:center;
+border-radius:15px;
+font-size:28px;
+font-weight:bold;
+text-decoration:none;
+color:#02152f;
+
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+
+transition:0.3s;
+}
+
+.subject-box:hover{
+transform:translateY(-5px);
+background:#02152f;
+color:white;
+}
+
+/* FOOTER */
+
+footer{
+background:#02152f;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="top-bar">
+
+<div class="email">
+<a href="mailto:goldenacademyedu@gmail.com">
+✉︎ goldenacademyedu@gmail.com
+</a>
+</div>
+
+<div>
+📞 +91 88831 17520
+</div>
+
+</div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<img src="logo.png" class="logo">
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</div>
+
+</nav>
+
+<!-- TITLE -->
+
+<section class="page-title">
+<h1>Class 10 Study Materials</h1>
+</section>
+
+<!-- SUBJECTS -->
+
+<section class="subjects">
+
+<a href="class10-math.html" class="subject-box">
+Math
+</a>
+
+<a href="#" class="subject-box">
+Science
+</a>
+
+<a href="#" class="subject-box">
+Social
+</a>
+
+<a href="#" class="subject-box">
+English
+</a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+© 2026 Golden Academy
+</footer>
+
+</body>
+</html>
