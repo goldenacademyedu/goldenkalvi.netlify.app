@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Contact - Golden Academy</title>
 
   <link rel="stylesheet" href="style.css" />
@@ -11,6 +13,7 @@
 <body>
 
 <!-- NAVBAR -->
+
 <nav class="navbar">
 
   <img src="logo.png" class="logo">
@@ -23,10 +26,14 @@
   <div class="nav-links" id="nav-links">
 
     <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="admission.html">Admission 2026-2027</a>
 
-    <!-- COURSES -->
+    <a href="about.html">About Us</a>
+
+    <a href="admission.html">
+      Admission 2026-2027
+    </a>
+
+    <!-- COURSES DROPDOWN -->
     <div class="dropdown">
 
       <button class="dropbtn">
@@ -35,66 +42,118 @@
 
       <div class="dropdown-content">
 
-        <a href="courses.html">All Courses</a>
-        <a href="jee-course.html">JEE</a>
-        <a href="neet-course.html">NEET</a>
+        <!-- COURSE DETAILS -->
+        <div class="sub-dropdown">
+
+          <button class="sub-dropbtn">
+            Course Details ▶
+          </button>
+
+          <div class="sub-dropdown-content">
+            <a href="class6-course.html">Class 6</a>
+            <a href="class7-course.html">Class 7</a>
+            <a href="class8-course.html">Class 8</a>
+            <a href="class9-course.html">Class 9</a>
+            <a href="class10-course.html">Class 10</a>
+            <a href="class11-course.html">Class 11</a>
+            <a href="class12-course.html">Class 12</a>
+            <a href="jee-course.html">JEE</a>
+            <a href="neet-course.html">NEET</a>
+          </div>
+
+        </div>
+
+        <!-- STUDY MATERIALS -->
+        <div class="sub-dropdown">
+
+          <button class="sub-dropbtn">
+            Study Materials ▶
+          </button>
+
+          <div class="sub-dropdown-content">
+            <a href="class6-materials.html">Class 6</a>
+            <a href="class7-materials.html">Class 7</a>
+            <a href="class8-materials.html">Class 8</a>
+            <a href="class9-materials.html">Class 9</a>
+            <a href="class10-materials.html">Class 10</a>
+            <a href="class11-materials.html">Class 11</a>
+            <a href="class12-materials.html">Class 12</a>
+            <a href="jee-materials.html">JEE</a>
+            <a href="neet-materials.html">NEET</a>
+          </div>
+
+        </div>
 
       </div>
 
     </div>
 
+    <!-- LOGIN -->
+    <div class="dropdown">
+
+      <button class="dropbtn">
+        Login ▼
+      </button>
+
+      <div class="dropdown-content">
+        <a href="student-login.html">Student Login</a>
+        <a href="faculty-login.html">Faculty Login</a>
+      </div>
+
+    </div>
+
     <a href="gallery.html">Gallery</a>
+
     <a href="contact.html">Contact</a>
+
+    <a href="career.html">Career</a>
 
   </div>
 
 </nav>
 
 <!-- CONTACT SECTION -->
+
 <section class="contact-section">
 
   <h2>Contact Us</h2>
 
   <div class="contact-container">
 
-    <!-- LEFT SIDE -->
+    <!-- CONTACT DETAILS -->
     <div class="contact-info">
 
-      <div class="info-box">
-        📞 <span>+91 88831 17520</span>
-      </div>
+      <p>📞 +91 88831 17520</p>
 
-      <div class="info-box">
-        📧 <span>goldenacademyedu@gmail.com</span>
-      </div>
+      <p>📧 goldenacademyedu@gmail.com</p>
 
-      <div class="info-box">
-        📍 <span>Balaji Nagar, Kattur, Trichy</span>
-      </div>
+      <p>📍 Balaji Nagar, Kattur, Trichy</p>
 
-      <!-- MAP -->
-      <div class="map-box">
-
-        <iframe
-          src="https://maps.google.com/maps?q=trichy&t=&z=13&ie=UTF8&iwloc=&output=embed"
-          width="100%"
-          height="250"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy">
-        </iframe>
-
-      </div>
+      <!-- SMALL MAP -->
+      <iframe
+        src="https://maps.google.com/maps?q=trichy&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        width="100%"
+        height="180"
+        style="border:0; border-radius:10px; margin-top:15px;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
 
     </div>
 
-    <!-- RIGHT SIDE -->
+    <!-- CONTACT FORM -->
     <div class="contact-form">
 
-      <!-- NETLIFY FORM -->
-      <form name="contact" method="POST" data-netlify="true">
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true">
 
-        <input type="hidden" name="form-name" value="contact" />
+        <input
+          type="hidden"
+          name="form-name"
+          value="contact"
+        />
 
         <input
           type="text"
@@ -129,11 +188,13 @@
 </section>
 
 <!-- FOOTER -->
+
 <footer class="footer">
   © 2026 Golden Academy
 </footer>
 
 <!-- JAVASCRIPT -->
+
 <script>
 const toggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
@@ -144,4 +205,5 @@ toggle.addEventListener("click", () => {
 </script>
 
 </body>
+
 </html>
