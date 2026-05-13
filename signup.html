@@ -91,6 +91,30 @@ body{
 </style>
 </head>
 
+<script>
+
+function signup(){
+
+  let name = document.querySelector('input[type="text"]').value;
+  let email = document.querySelector('input[type="email"]').value;
+  let password = document.querySelector('input[type="password"]').value;
+
+  if(name === "" || email === "" || password === ""){
+
+    alert("Please fill all details");
+
+  } else {
+
+    alert("Account Created Successfully");
+
+    window.location.href = "student-login.html";
+
+  }
+
+}
+
+</script>
+  
 <body>
 
 <div class="signup-box">
@@ -112,9 +136,9 @@ body{
     <input type="password" placeholder="Enter Password">
   </div>
 
-  <button type="button" class="signup-btn">
-    Signup
-  </button>
+<button type="button" class="signup-btn" onclick="signup()">
+  Signup
+</button>
 
   <a href="student-login.html" class="login-link">
     Already have account? Login
