@@ -91,6 +91,24 @@
 </style>
 </head>
 
+<script>
+function login(){
+
+  let email = document.querySelector('input[type="email"]').value;
+  let password = document.querySelector('input[type="password"]').value;
+
+  if(email === "student@golden.com" && password === "1234"){
+    
+    window.location.href = "dashboard.html";
+
+  } else {
+
+    alert("Invalid Email or Password");
+
+  }
+}
+</script>
+ 
 <body>
 
 <div class="login-box">
@@ -108,7 +126,7 @@
     <input type="password" placeholder="Enter Password">
   </div>
 
-  <button class="login-btn">Login</button>
+  <button class="login-btn" onclick="login()">Login</button>
 
   <a href="#" class="create-account">Create New Account</a>
 
