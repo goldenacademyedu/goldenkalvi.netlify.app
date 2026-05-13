@@ -1,58 +1,126 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Golden Academy Signup</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Signup</title>
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#1e3c72,#2a5298);
+}
+
+.signup-box{
+  width:350px;
+  background:white;
+  padding:40px 30px;
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  text-align:center;
+}
+
+.signup-box h1{
+  margin-bottom:25px;
+  color:#1e3c72;
+  font-size:32px;
+}
+
+.input-box{
+  margin-bottom:18px;
+}
+
+.input-box input{
+  width:100%;
+  padding:14px;
+  border:1px solid #ccc;
+  border-radius:10px;
+  font-size:16px;
+}
+
+.input-box input:focus{
+  outline:none;
+  border-color:#1e3c72;
+  box-shadow:0 0 8px rgba(30,60,114,0.3);
+}
+
+.signup-btn{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:10px;
+  background:#1e3c72;
+  color:white;
+  font-size:17px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.signup-btn:hover{
+  background:#16325c;
+}
+
+.login-link{
+  display:block;
+  margin-top:20px;
+  color:#1e3c72;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.login-link:hover{
+  text-decoration:underline;
+}
+
+.logo{
+  width:80px;
+  margin-bottom:15px;
+}
+
+</style>
 </head>
 
 <body>
 
-<h2>Student Signup</h2>
+<div class="signup-box">
 
-<input type="email" id="email" placeholder="Enter Email">
-<br><br>
+  <!-- Optional Logo -->
+  <img src="logo.png" class="logo">
 
-<input type="password" id="password" placeholder="Enter Password">
-<br><br>
+  <h1>Student Signup</h1>
 
-<button onclick="signup()">Signup</button>
+  <div class="input-box">
+    <input type="text" placeholder="Full Name">
+  </div>
 
-<br><br>
+  <div class="input-box">
+    <input type="email" placeholder="Enter Email">
+  </div>
 
-<a href="login.html">Already have account? Login</a>
+  <div class="input-box">
+    <input type="password" placeholder="Enter Password">
+  </div>
 
-<script type="module">
+  <button type="button" class="signup-btn">
+    Signup
+  </button>
 
-import { auth } from './firebase-config.js';
+  <a href="student-login.html" class="login-link">
+    Already have account? Login
+  </a>
 
-import {
-  createUserWithEmailAndPassword
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-
-window.signup = function () {
-
-  const email = document.getElementById("email").value;
-
-  const password = document.getElementById("password").value;
-
-  createUserWithEmailAndPassword(auth, email, password)
-
-  .then((userCredential) => {
-
-    alert("Account Created Successfully");
-
-    window.location.href = "login.html";
-
-  })
-
-  .catch((error) => {
-
-    alert(error.message);
-
-  });
-
-}
-
-</script>
+</div>
 
 </body>
 </html>
