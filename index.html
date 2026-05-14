@@ -281,7 +281,95 @@
         font-size:16px;
       }
     }
+/* ACHIEVERS */
 
+.achievers{
+  padding:70px 5%;
+  background:white;
+  text-align:center;
+}
+
+.achievers h2{
+  font-size:38px;
+  color:#02152f;
+  margin-bottom:40px;
+}
+
+.achievers-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  margin-bottom:40px;
+}
+
+.achiever-card{
+  background:#fff;
+  padding:30px 20px;
+  border-radius:20px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.achiever-card:hover{
+  transform:translateY(-8px);
+}
+
+.achiever-img{
+  width:120px;
+  height:120px;
+  object-fit:cover;
+  border-radius:50%;
+  margin-bottom:20px;
+  border:5px solid #ffd700;
+}
+
+.achiever-card h3{
+  color:#02152f;
+  margin-bottom:10px;
+}
+
+.achiever-card p{
+  font-size:20px;
+  font-weight:bold;
+  color:#1c39bb;
+  margin-bottom:10px;
+}
+
+.achiever-card span{
+  color:#666;
+}
+
+/* STATS */
+
+.stats{
+  background:linear-gradient(135deg,#02152f,#0b63ce);
+  color:white;
+
+  padding:70px 5%;
+
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:30px;
+
+  text-align:center;
+}
+
+.stat-box{
+  background:rgba(255,255,255,0.08);
+  padding:35px 20px;
+  border-radius:20px;
+  backdrop-filter:blur(5px);
+}
+
+.stat-box h2{
+  font-size:50px;
+  margin-bottom:10px;
+  color:#ffd700;
+}
+
+.stat-box p{
+  font-size:18px;
+}
   </style>
 </head>
 
@@ -477,6 +565,79 @@ toggle.addEventListener("click", () => {
 
 </section>
 
+<!-- TOP ACHIEVERS -->
+
+<section class="achievers">
+
+  <h2>Top Achievers</h2>
+
+  <div class="achievers-grid">
+
+    <div class="achiever-card">
+      <img src="student1.jpg" class="achiever-img">
+
+      <h3>Keerthana S</h3>
+
+      <p>495 / 500</p>
+
+      <span>State Rank Holder</span>
+    </div>
+
+    <div class="achiever-card">
+      <img src="student2.jpg" class="achiever-img">
+
+      <h3>Arjun M</h3>
+
+      <p>Centum in Maths</p>
+
+      <span>CBSE Topper</span>
+    </div>
+
+    <div class="achiever-card">
+      <img src="student3.jpg" class="achiever-img">
+
+      <h3>Harini V</h3>
+
+      <p>NEET Qualified</p>
+
+      <span>Medical Aspirant</span>
+    </div>
+
+  </div>
+
+  <a href="achievements.html" class="btn">
+    View All Achievements
+  </a>
+
+</section>
+
+<!-- STATISTICS COUNTER -->
+
+<section class="stats">
+
+  <div class="stat-box">
+    <h2>1200+</h2>
+    <p>Students Trained</p>
+  </div>
+
+  <div class="stat-box">
+    <h2>350+</h2>
+    <p>Centums Scored</p>
+  </div>
+
+  <div class="stat-box">
+    <h2>98%</h2>
+    <p>Pass Percentage</p>
+  </div>
+
+  <div class="stat-box">
+    <h2>75+</h2>
+    <p>NEET/JEE Selections</p>
+  </div>
+
+</section>
+  
+  
 <!-- GALLERY -->
 
 <section class="gallery">
