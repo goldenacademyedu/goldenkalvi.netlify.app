@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Student Signup</title>
 
 <style>
@@ -89,46 +92,13 @@ body{
 }
 
 </style>
+
 </head>
 
-<script type="module">
-
-import { auth } from "./firebase.js";
-
-import {
-  createUserWithEmailAndPassword
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-
-window.signup = function(){
-
-  let email = document.querySelector('input[type="email"]').value;
-  let password = document.querySelector('input[type="password"]').value;
-
-  createUserWithEmailAndPassword(auth, email, password)
-
-  .then((userCredential) => {
-
-    alert("Account Created Successfully");
-
-    window.location.href = "student-login.html";
-
-  })
-
-  .catch((error) => {
-
-    alert(error.message);
-
-  });
-
-}
-
-</script>
-  
 <body>
 
 <div class="signup-box">
 
-  <!-- Optional Logo -->
   <img src="logo.png" class="logo">
 
   <h1>Student Signup</h1>
@@ -145,15 +115,62 @@ window.signup = function(){
     <input type="password" placeholder="Enter Password">
   </div>
 
-<button type="button" class="signup-btn" onclick="signup()">
-Signup
-</button>
+  <button type="button" class="signup-btn">
+    Signup
+  </button>
 
   <a href="student-login.html" class="login-link">
     Already have account? Login
   </a>
 
 </div>
+
+<!-- FIREBASE SIGNUP SCRIPT -->
+
+<script type="module">
+
+import { auth } from "./firebase.js";
+
+import {
+  createUserWithEmailAndPassword
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+const signupBtn = document.querySelector(".signup-btn");
+
+signupBtn.addEventListener("click", async () => {
+
+  const email = document.querySelector('input[type="email"]').value;
+
+  const password = document.querySelector('input[type="password"]').value;
+
+  if(email === "" || password === ""){
+
+    alert("Please fill all fields");
+    return;
+
+  }
+
+  try {
+
+    await createUserWithEmailAndPassword(auth, email, password);
+
+    alert("Account Created Successfully");
+
+    window.location.href = "dashboard.html";
+
+  }
+
+  catch(error){
+
+    alert(error.message);
+
+    console.log(error);
+
+  }
+
+});
+
+</script>
 
 </body>
 </html>
