@@ -285,6 +285,50 @@
   </style>
 </head>
 
+<script type="module">
+
+import { auth } from "./firebase.js";
+
+import {
+  onAuthStateChanged,
+  signOut
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+const loginArea = document.getElementById("login-area");
+
+onAuthStateChanged(auth, (user) => {
+
+  if(user){
+
+    loginArea.innerHTML = `
+      <a href="dashboard.html">Dashboard</a>
+      <a href="#" id="logoutBtn">Logout</a>
+    `;
+
+    document
+      .getElementById("logoutBtn")
+      .addEventListener("click", async () => {
+
+        await signOut(auth);
+
+        alert("Logged Out");
+
+        window.location.reload();
+
+      });
+
+  } else {
+
+    loginArea.innerHTML = `
+      <a href="student-login.html">Student Login</a>
+      <a href="faculty-login.html">Faculty Login</a>
+    `;
+  }
+
+});
+
+</script>
+  
 <body>
 
 <!-- TOP BAR -->
@@ -371,8 +415,9 @@
     <div class="dropdown">
       <button class="dropbtn">Login ▼</button>
 
-      <div class="dropdown-content">
+      <div class="dropdown-content" id="login-area">
         <a href="student-login.html">Student Login</a>
+        <a href="dashboard.html">Student Dashboard</a>
         <a href="faculty-login.html">Faculty Login</a>
       </div>
     </div>
